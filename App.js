@@ -25,11 +25,12 @@ const Header = () => {
 
 const Restocard = (props) => {
    const {resdata}=props
-    const {name,cuisines,avgRating} =resdata.card.card.info
+    const {name,cuisines,avgRating,cloudinaryImageId} =resdata.card.card.info
     const {deliveryTime} =resdata.card.card.info.sla
    return (
       <div className="resto-card">
-         <img className="food-Img" alt="food-Img" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2024/8/13/538763bd-8b40-4ed6-8e4f-dd337c3a8017_24f3fdba-909c-414c-beea-ac6c56ad8efd.jpg"/>
+         <img className="food-Img" alt="food-Img" 
+         src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/>
             <h3>{name}</h3>
             <h4>{cuisines.join(",")}</h4>
             <h4>{deliveryTime} Min</h4>
@@ -38,33 +39,122 @@ const Restocard = (props) => {
    )
 }
 
-const resList=[ {
+const resList=[
+ 
+{
 "card": {
 "card": {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "67791",
-"name": "Rambharose - Bhattad Ki Idli",
-"cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/8/13/538763bd-8b40-4ed6-8e4f-dd337c3a8017_24f3fdba-909c-414c-beea-ac6c56ad8efd.jpg",
-"locality": "Narayanguda Rd",
-"areaName": "Kachiguda",
-"costForTwo": "₹300 for two",
+"id": "25251",
+"name": "Meridian Restaurant",
+"cloudinaryImageId": "r68yifjk7tmgjkmlpdww",
+"locality": "Panjagutta",
+"areaName": "Panjagutta",
+"costForTwo": "₹400 for two",
 "cuisines": [
-"South Indian"
+"Biryani",
+"Chinese",
+"Kebabs"
 ],
 "avgRating": 4.4,
-"veg": true,
-"parentId": "166509",
+"parentId": "19276",
 "avgRatingString": "4.4",
-"totalRatingsString": "51K+",
-"promoted": true,
-"adTrackingId": "cid=59a86269-4239-4970-ae9b-0e47ec72cff8~p=0~adgrpid=59a86269-4239-4970-ae9b-0e47ec72cff8#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=67791~plpr=COLLECTION~eid=8884b89e-86d9-4249-9ab8-5a2dfce6522c~srvts=1747969045886~collid=80424",
+"totalRatingsString": "249K+",
 "sla": {
-"deliveryTime": 34,
-"lastMileTravel": 5.5,
+"deliveryTime": 25,
+"lastMileTravel": 2.8,
 "serviceability": "SERVICEABLE",
-"slaString": "30-35 mins",
-"lastMileTravelString": "5.5 km",
+"slaString": "20-25 mins",
+"lastMileTravelString": "2.8 km",
+"iconType": "ICON_TYPE_EMPTY"
+},
+"availability": {
+"nextCloseTime": "2025-05-23 23:45:00",
+"opened": true
+},
+"badges": {},
+"isOpen": true,
+"aggregatedDiscountInfoV2": {},
+"type": "F",
+"badgesV2": {
+"entityBadges": {
+"textBased": {},
+"imageBased": {},
+"textExtendedBadges": {}
+}
+},
+"orderabilityCommunication": {
+"title": {},
+"subTitle": {},
+"message": {},
+"customIcon": {},
+"commsStyling": {}
+},
+"differentiatedUi": {
+"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+"differentiatedUiMediaDetails": {
+"mediaType": "ADS_MEDIA_ENUM_IMAGE",
+"lottie": {},
+"video": {}
+}
+},
+"reviewsSummary": {},
+"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+"restaurantOfferPresentationInfo": {},
+"externalRatings": {
+"aggregatedRating": {
+"rating": "3.9",
+"ratingCount": "23K+"
+},
+"source": "GOOGLE",
+"sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
+},
+"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+},
+"analytics": {},
+"cta": {
+"link": "swiggy://menu?restaurant_id=25251&source=collection&query=Biryani",
+"text": "RESTAURANT_MENU",
+"type": "DEEPLINK"
+},
+"widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+},
+"relevance": {
+"type": "RELEVANCE_TYPE_ON_MENU_RETURN",
+"sectionId": "MENU_RETURN_FOOD"
+}
+}
+},
+{
+"card": {
+"card": {
+"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+"info": {
+"id": "4138",
+"name": "Grand Hotel",
+"cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2025/1/10/11bab9a5-1cd7-4e69-b837-f7ec3150c493_80f7ff85-05a4-4f94-8525-bf9f2713fbce.jpg",
+"locality": "Banjara Hills",
+"areaName": "Abids",
+"costForTwo": "₹300 for two",
+"cuisines": [
+"Biryani",
+"Chinese",
+"Kebabs",
+"Tandoor"
+],
+"avgRating": 4.4,
+"parentId": "4001",
+"avgRatingString": "4.4",
+"totalRatingsString": "321K+",
+"promoted": true,
+"adTrackingId": "cid=938f3290-8489-4652-a7fd-b22ce7890159~p=2~adgrpid=938f3290-8489-4652-a7fd-b22ce7890159#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=4138~plpr=COLLECTION~eid=0f0a95f4-6911-4554-bcc0-1eb9f65156d6~srvts=1747985474953~collid=83639",
+"sla": {
+"deliveryTime": 36,
+"lastMileTravel": 5.8,
+"serviceability": "SERVICEABLE",
+"slaString": "35-40 mins",
+"lastMileTravelString": "5.8 km",
 "iconType": "ICON_TYPE_EMPTY"
 },
 "availability": {
@@ -82,8 +172,8 @@ const resList=[ {
 }
 },
 "aggregatedDiscountInfoV3": {
-"header": "ITEMS",
-"subHeader": "AT ₹29",
+"header": "30% OFF",
+"subHeader": "UPTO ₹75",
 "logoCtx": {
 "text": "BENEFITS"
 }
@@ -108,214 +198,18 @@ const resList=[ {
 "restaurantOfferPresentationInfo": {},
 "externalRatings": {
 "aggregatedRating": {
-"rating": "--"
-}
-},
-"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-"campaignId": "59a86269-4239-4970-ae9b-0e47ec72cff8"
-},
-"analytics": {},
-"cta": {
-"link": "swiggy://menu?restaurant_id=67791&source=collection&query=Dosa",
-"text": "RESTAURANT_MENU",
-"type": "DEEPLINK"
-},
-"widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-},
-"relevance": {
-"type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-"sectionId": "MENU_RETURN_FOOD"
-}
-}
-},
-{
-"card": {
-"card": {
-"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-"info": {
-"id": "884520",
-"name": "Udipi's Upahar",
-"cloudinaryImageId": "da84e2493555494d050ab78c95a193f1",
-"locality": "Hussain Sagar",
-"areaName": "Banjara Hills",
-"costForTwo": "₹250 for two",
-"cuisines": [
-"Beverages",
-"South Indian",
-"Fast Food",
-"Snacks",
-"Ice Cream",
-"Desserts"
-],
-"avgRating": 4.2,
-"veg": true,
-"parentId": "1061",
-"avgRatingString": "4.2",
-"totalRatingsString": "41",
-"sla": {
-"deliveryTime": 42,
-"lastMileTravel": 2.3,
-"serviceability": "SERVICEABLE",
-"slaString": "40-45 mins",
-"lastMileTravelString": "2.3 km",
-"iconType": "ICON_TYPE_EMPTY"
-},
-"availability": {
-"nextCloseTime": "2025-05-23 22:30:00",
-"opened": true
-},
-"badges": {},
-"isOpen": true,
-"type": "F",
-"badgesV2": {
-"entityBadges": {
-"textBased": {},
-"imageBased": {},
-"textExtendedBadges": {}
-}
-},
-"aggregatedDiscountInfoV3": {
-"header": "₹75 OFF",
-"subHeader": "ABOVE ₹249",
-"discountTag": "FLAT DEAL",
-"logoCtx": {
-"text": "BENEFITS"
-}
-},
-"orderabilityCommunication": {
-"title": {},
-"subTitle": {},
-"message": {},
-"customIcon": {},
-"commsStyling": {}
-},
-"differentiatedUi": {
-"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-"differentiatedUiMediaDetails": {
-"mediaType": "ADS_MEDIA_ENUM_IMAGE",
-"lottie": {},
-"video": {}
-}
-},
-"reviewsSummary": {},
-"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-"restaurantOfferPresentationInfo": {},
-"externalRatings": {
-"aggregatedRating": {
-"rating": "--"
-}
-},
-"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-},
-"analytics": {},
-"cta": {
-"link": "swiggy://menu?restaurant_id=884520&source=collection&query=Dosa",
-"text": "RESTAURANT_MENU",
-"type": "DEEPLINK"
-},
-"widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-},
-"relevance": {
-"type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-"sectionId": "MENU_RETURN_FOOD"
-}
-}
-},
-{
-"card": {
-"card": {
-"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-"info": {
-"id": "184256",
-"name": "Panchakattu Dosa",
-"cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/4/10/8c3702e9-6db8-43ca-9dc8-254ab8532d52_f9d28c99-c19c-464a-a43a-f8e60f707566.jpeg",
-"locality": "Jubilee Hills",
-"areaName": "Banjara Hills",
-"costForTwo": "₹200 for two",
-"cuisines": [
-"South Indian"
-],
-"avgRating": 4.6,
-"veg": true,
-"parentId": "154201",
-"avgRatingString": "4.6",
-"totalRatingsString": "21K+",
-"promoted": true,
-"adTrackingId": "cid=ac3647d3-b699-4e46-9775-0b75aa2443d6~p=1~adgrpid=ac3647d3-b699-4e46-9775-0b75aa2443d6#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=184256~plpr=COLLECTION~eid=baa41392-b804-4a22-93e7-adf37cbd23e0~srvts=1747969045886~collid=80424",
-"sla": {
-"deliveryTime": 46,
-"lastMileTravel": 5.8,
-"serviceability": "SERVICEABLE",
-"slaString": "45-50 mins",
-"lastMileTravelString": "5.8 km",
-"iconType": "ICON_TYPE_EMPTY"
-},
-"availability": {
-"nextCloseTime": "2025-05-23 13:00:00",
-"opened": true
-},
-"badges": {
-"imageBadges": [
-{
-"imageId": "Rxawards/_CATEGORY-South%20Indian.png",
-"description": "Delivery!"
-}
-]
-},
-"isOpen": true,
-"type": "F",
-"badgesV2": {
-"entityBadges": {
-"textBased": {},
-"imageBased": {
-"badgeObject": [
-{
-"attributes": {
-"imageId": "Rxawards/_CATEGORY-South%20Indian.png",
-"description": "Delivery!"
-}
-}
-]
-},
-"textExtendedBadges": {}
-}
-},
-"aggregatedDiscountInfoV3": {
-"header": "ITEMS",
-"subHeader": "AT ₹49"
-},
-"orderabilityCommunication": {
-"title": {},
-"subTitle": {},
-"message": {},
-"customIcon": {},
-"commsStyling": {}
-},
-"differentiatedUi": {
-"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-"differentiatedUiMediaDetails": {
-"mediaType": "ADS_MEDIA_ENUM_IMAGE",
-"lottie": {},
-"video": {}
-}
-},
-"reviewsSummary": {},
-"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-"restaurantOfferPresentationInfo": {},
-"externalRatings": {
-"aggregatedRating": {
-"rating": "4.4",
-"ratingCount": "4.0K+"
+"rating": "4.1",
+"ratingCount": "30K+"
 },
 "source": "GOOGLE",
 "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
 },
 "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-"campaignId": "ac3647d3-b699-4e46-9775-0b75aa2443d6"
+"campaignId": "938f3290-8489-4652-a7fd-b22ce7890159"
 },
 "analytics": {},
 "cta": {
-"link": "swiggy://menu?restaurant_id=184256&source=collection&query=Dosa",
+"link": "swiggy://menu?restaurant_id=4138&source=collection&query=Biryani",
 "text": "RESTAURANT_MENU",
 "type": "DEEPLINK"
 },
@@ -332,30 +226,32 @@ const resList=[ {
 "card": {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "785996",
-"name": "Swathi Tiffins",
-"cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/4/2/9e0c2655-c394-4bd2-b73a-7fbe89630773_665a20b1-3f57-4541-9ee6-b64d0f0a3fb7.JPG",
-"locality": "Somajiguda",
+"id": "142670",
+"name": "Shah Ghouse Hotel & Restaurant",
+"cloudinaryImageId": "grqh1zb1kv8uhkmyercb",
+"locality": "Santh Nirankari Satsang Bhavan",
 "areaName": "Banjara Hills",
-"costForTwo": "₹400 for two",
+"costForTwo": "₹350 for two",
 "cuisines": [
-"North Indian"
+"Biryani",
+"Chinese",
+"Tandoor",
+"Mughlai"
 ],
-"avgRating": 4.4,
-"veg": true,
-"parentId": "5029",
-"avgRatingString": "4.4",
-"totalRatingsString": "153",
+"avgRating": 4.3,
+"parentId": "19271",
+"avgRatingString": "4.3",
+"totalRatingsString": "74K+",
 "sla": {
-"deliveryTime": 20,
-"lastMileTravel": 1.2,
+"deliveryTime": 27,
+"lastMileTravel": 1.4,
 "serviceability": "SERVICEABLE",
-"slaString": "20-25 mins",
-"lastMileTravelString": "1.2 km",
+"slaString": "25-30 mins",
+"lastMileTravelString": "1.4 km",
 "iconType": "ICON_TYPE_EMPTY"
 },
 "availability": {
-"nextCloseTime": "2025-05-23 22:00:00",
+"nextCloseTime": "2025-05-30 00:00:00",
 "opened": true
 },
 "badges": {
@@ -365,8 +261,8 @@ const resList=[ {
 "description": "bolt!"
 },
 {
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
+"imageId": "Rxawards/_CATEGORY-Biryani.png",
+"description": "Delivery!"
 }
 ]
 },
@@ -386,8 +282,8 @@ const resList=[ {
 },
 {
 "attributes": {
-"description": "pureveg",
-"imageId": "v1695133679/badges/Pure_Veg111.png"
+"description": "Delivery!",
+"imageId": "Rxawards/_CATEGORY-Biryani.png"
 }
 }
 ]
@@ -422,7 +318,7 @@ const resList=[ {
 },
 "analytics": {},
 "cta": {
-"link": "swiggy://menu?restaurant_id=785996&source=collection&query=Dosa",
+"link": "swiggy://menu?restaurant_id=142670&source=collection&query=Biryani",
 "text": "RESTAURANT_MENU",
 "type": "DEEPLINK"
 },
@@ -439,240 +335,26 @@ const resList=[ {
 "card": {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "41005",
-"name": "Sri Raghavendra Tiffins",
-"cloudinaryImageId": "a9ftokru06shztntaaex",
-"locality": "Barkathpura",
-"areaName": "Kachiguda",
+"id": "464416",
+"name": "Mehfil",
+"cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/4/7/e9772866-688c-4f7d-8363-664515b8b158_464416.jpg",
+"locality": "Kv Road No 12",
+"areaName": "Banjara Hills",
 "costForTwo": "₹300 for two",
 "cuisines": [
-"South Indian",
-"Andhra"
-],
-"avgRating": 4.4,
-"veg": true,
-"parentId": "8196",
-"avgRatingString": "4.4",
-"totalRatingsString": "47K+",
-"promoted": true,
-"adTrackingId": "cid=746ecfd7-dfff-4b64-9031-fc17b6719870~p=4~adgrpid=746ecfd7-dfff-4b64-9031-fc17b6719870#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=41005~plpr=COLLECTION~eid=1bd0cbae-2235-48ea-bdee-e1c23860cb75~srvts=1747969045886~collid=80424",
-"sla": {
-"deliveryTime": 31,
-"lastMileTravel": 5.8,
-"serviceability": "SERVICEABLE",
-"slaString": "30-35 mins",
-"lastMileTravelString": "5.8 km",
-"iconType": "ICON_TYPE_EMPTY"
-},
-"availability": {
-"nextCloseTime": "2025-05-23 22:20:00",
-"opened": true
-},
-"badges": {
-"imageBadges": [
-{
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
-}
-]
-},
-"isOpen": true,
-"type": "F",
-"badgesV2": {
-"entityBadges": {
-"imageBased": {
-"badgeObject": [
-{
-"attributes": {
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
-}
-}
-]
-},
-"textExtendedBadges": {},
-"textBased": {}
-}
-},
-"aggregatedDiscountInfoV3": {
-"header": "40% OFF",
-"subHeader": "UPTO ₹80",
-"logoCtx": {
-"text": "BENEFITS"
-}
-},
-"orderabilityCommunication": {
-"title": {},
-"subTitle": {},
-"message": {},
-"customIcon": {},
-"commsStyling": {}
-},
-"differentiatedUi": {
-"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-"differentiatedUiMediaDetails": {
-"mediaType": "ADS_MEDIA_ENUM_IMAGE",
-"lottie": {},
-"video": {}
-}
-},
-"reviewsSummary": {},
-"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-"restaurantOfferPresentationInfo": {},
-"externalRatings": {
-"aggregatedRating": {
-"rating": "--"
-}
-},
-"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-"campaignId": "746ecfd7-dfff-4b64-9031-fc17b6719870"
-},
-"analytics": {},
-"cta": {
-"link": "swiggy://menu?restaurant_id=41005&source=collection&query=Dosa",
-"text": "RESTAURANT_MENU",
-"type": "DEEPLINK"
-},
-"widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-},
-"relevance": {
-"type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-"sectionId": "MENU_RETURN_FOOD"
-}
-}
-},
-{
-"card": {
-"card": {
-"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-"info": {
-"id": "27693",
-"name": "Dwaraka Restaurant",
-"cloudinaryImageId": "FOOD_CATALOG/IMAGES/CMS/2024/5/9/0d1e4a4b-3746-429b-aeaa-16a68cae3ac9_4e8fd65a-d5e3-423a-b056-0e64118a5b28.jpg",
-"locality": "lakdikapool",
-"areaName": "Lakdi-Ka-Pul",
-"costForTwo": "₹250 for two",
-"cuisines": [
-"North Indian",
+"Biryani",
 "Chinese",
-"South Indian"
+"Kebabs",
+"Tandoor"
 ],
 "avgRating": 4.4,
-"veg": true,
-"parentId": "3936",
+"parentId": "637",
 "avgRatingString": "4.4",
-"totalRatingsString": "29K+",
-"sla": {
-"deliveryTime": 24,
-"lastMileTravel": 2.1,
-"serviceability": "SERVICEABLE",
-"slaString": "20-25 mins",
-"lastMileTravelString": "2.1 km",
-"iconType": "ICON_TYPE_EMPTY"
-},
-"availability": {
-"nextCloseTime": "2025-05-23 23:00:00",
-"opened": true
-},
-"badges": {
-"imageBadges": [
-{
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
-}
-]
-},
-"isOpen": true,
-"type": "F",
-"badgesV2": {
-"entityBadges": {
-"imageBased": {
-"badgeObject": [
-{
-"attributes": {
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
-}
-}
-]
-},
-"textExtendedBadges": {},
-"textBased": {}
-}
-},
-"aggregatedDiscountInfoV3": {
-"header": "₹200 OFF",
-"subHeader": "ABOVE ₹599",
-"discountTag": "FLAT DEAL",
-"logoCtx": {
-"text": "BENEFITS"
-}
-},
-"orderabilityCommunication": {
-"title": {},
-"subTitle": {},
-"message": {},
-"customIcon": {},
-"commsStyling": {}
-},
-"differentiatedUi": {
-"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-"differentiatedUiMediaDetails": {
-"mediaType": "ADS_MEDIA_ENUM_IMAGE",
-"lottie": {},
-"video": {}
-}
-},
-"reviewsSummary": {},
-"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-"restaurantOfferPresentationInfo": {},
-"externalRatings": {
-"aggregatedRating": {
-"rating": "4.2",
-"ratingCount": "892"
-},
-"source": "GOOGLE",
-"sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-},
-"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-},
-"analytics": {},
-"cta": {
-"link": "swiggy://menu?restaurant_id=27693&source=collection&query=Dosa",
-"text": "RESTAURANT_MENU",
-"type": "DEEPLINK"
-},
-"widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-},
-"relevance": {
-"type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-"sectionId": "MENU_RETURN_FOOD"
-}
-}
-},
-{
-"card": {
-"card": {
-"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-"info": {
-"id": "41006",
-"name": "Udupi Park Pure Veg",
-"cloudinaryImageId": "syb0p0etz80btn3otwv3",
-"locality": "Opp Old Prime Hospital",
-"areaName": "Ameerpet",
-"costForTwo": "₹300 for two",
-"cuisines": [
-"South Indian"
-],
-"avgRating": 4,
-"veg": true,
-"parentId": "19160",
-"avgRatingString": "4.0",
-"totalRatingsString": "76K+",
+"totalRatingsString": "40K+",
 "promoted": true,
-"adTrackingId": "cid=4cf85a84-3045-4045-9f20-f1eace956843~p=6~adgrpid=4cf85a84-3045-4045-9f20-f1eace956843#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=41006~plpr=COLLECTION~eid=e7c23723-9a95-4e7b-b200-8544fbe8f1de~srvts=1747969045886~collid=80424",
+"adTrackingId": "cid=b02aaa35-c3ac-45e3-8f3c-e0688f0b30aa~p=3~adgrpid=b02aaa35-c3ac-45e3-8f3c-e0688f0b30aa#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=464416~plpr=COLLECTION~eid=02c89cf5-a3b3-435f-b83d-0b843ac3a8fa~srvts=1747985474953~collid=83639",
 "sla": {
-"deliveryTime": 31,
+"deliveryTime": 30,
 "lastMileTravel": 4.8,
 "serviceability": "SERVICEABLE",
 "slaString": "30-35 mins",
@@ -680,14 +362,14 @@ const resList=[ {
 "iconType": "ICON_TYPE_EMPTY"
 },
 "availability": {
-"nextCloseTime": "2025-05-23 23:30:00",
+"nextCloseTime": "2025-05-23 23:59:00",
 "opened": true
 },
 "badges": {
 "imageBadges": [
 {
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
+"imageId": "Rxawards/_CATEGORY-Biryani.png",
+"description": "Delivery!"
 }
 ]
 },
@@ -695,23 +377,23 @@ const resList=[ {
 "type": "F",
 "badgesV2": {
 "entityBadges": {
-"textBased": {},
 "imageBased": {
 "badgeObject": [
 {
 "attributes": {
-"description": "pureveg",
-"imageId": "v1695133679/badges/Pure_Veg111.png"
+"imageId": "Rxawards/_CATEGORY-Biryani.png",
+"description": "Delivery!"
 }
 }
 ]
 },
-"textExtendedBadges": {}
+"textExtendedBadges": {},
+"textBased": {}
 }
 },
 "aggregatedDiscountInfoV3": {
-"header": "ITEMS",
-"subHeader": "AT ₹59",
+"header": "10% OFF",
+"subHeader": "UPTO ₹40",
 "logoCtx": {
 "text": "BENEFITS"
 }
@@ -740,11 +422,11 @@ const resList=[ {
 }
 },
 "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-"campaignId": "4cf85a84-3045-4045-9f20-f1eace956843"
+"campaignId": "b02aaa35-c3ac-45e3-8f3c-e0688f0b30aa"
 },
 "analytics": {},
 "cta": {
-"link": "swiggy://menu?restaurant_id=41006&source=collection&query=Dosa",
+"link": "swiggy://menu?restaurant_id=464416&source=collection&query=Biryani",
 "text": "RESTAURANT_MENU",
 "type": "DEEPLINK"
 },
@@ -761,59 +443,41 @@ const resList=[ {
 "card": {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "89773",
-"name": "Shanbhag Hotel",
-"cloudinaryImageId": "zendf9goidyrrtxnoaz8",
-"locality": "Panjagutta",
-"areaName": "Panjagutta",
+"id": "312800",
+"name": "HILLSTAR RESTAURANT",
+"cloudinaryImageId": "cslun7lsxewjajzkthhf",
+"locality": "Khairatabad",
+"areaName": "Khairatabad",
 "costForTwo": "₹300 for two",
 "cuisines": [
-"North Indian",
-"South Indian",
 "Chinese",
-"Biryani",
-"Thalis",
-"Fast Food"
+"Biryani"
 ],
-"avgRating": 4.3,
-"veg": true,
-"parentId": "181589",
-"avgRatingString": "4.3",
-"totalRatingsString": "8.6K+",
+"avgRating": 4.4,
+"parentId": "562532",
+"avgRatingString": "4.4",
+"totalRatingsString": "38K+",
 "sla": {
-"deliveryTime": 25,
-"lastMileTravel": 2.6,
+"deliveryTime": 26,
+"lastMileTravel": 2.1,
 "serviceability": "SERVICEABLE",
 "slaString": "25-30 mins",
-"lastMileTravelString": "2.6 km",
+"lastMileTravelString": "2.1 km",
 "iconType": "ICON_TYPE_EMPTY"
 },
 "availability": {
-"nextCloseTime": "2025-05-23 22:30:00",
+"nextCloseTime": "2025-05-24 02:00:00",
 "opened": true
 },
 "badges": {},
 "isOpen": true,
+"aggregatedDiscountInfoV2": {},
 "type": "F",
 "badgesV2": {
 "entityBadges": {
 "textBased": {},
 "imageBased": {},
 "textExtendedBadges": {}
-}
-},
-"aggregatedDiscountInfoV3": {
-"header": "40% OFF",
-"subHeader": "UPTO ₹75",
-"discountTag": "POCKET HERO",
-"discountCalloutInfo": {
-"message": "Free Delivery",
-"logoCtx": {
-"logo": "v1655895371/free_delivery_logo_hqipbo.png"
-}
-},
-"logoCtx": {
-"text": "BENEFITS"
 }
 },
 "orderabilityCommunication": {
@@ -836,8 +500,8 @@ const resList=[ {
 "restaurantOfferPresentationInfo": {},
 "externalRatings": {
 "aggregatedRating": {
-"rating": "3.7",
-"ratingCount": "5.3K+"
+"rating": "4.1",
+"ratingCount": "5.4K+"
 },
 "source": "GOOGLE",
 "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
@@ -846,7 +510,7 @@ const resList=[ {
 },
 "analytics": {},
 "cta": {
-"link": "swiggy://menu?restaurant_id=89773&source=collection&query=Dosa",
+"link": "swiggy://menu?restaurant_id=312800&source=collection&query=Biryani",
 "text": "RESTAURANT_MENU",
 "type": "DEEPLINK"
 },
@@ -863,37 +527,33 @@ const resList=[ {
 "card": {
 "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
 "info": {
-"id": "812299",
-"name": "Udupi Ghar",
-"cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/8/c4500379-b463-4357-8b9b-b057a9324b54_812299.jpg",
-"locality": "Asif Nagar Road",
-"areaName": "Mehdipatnam",
+"id": "218478",
+"name": "Harsha Deluxe Mess",
+"cloudinaryImageId": "ir9vmlt9fp71bygmrzfa",
+"locality": "Ameerpet",
+"areaName": "Ameerpet",
 "costForTwo": "₹300 for two",
 "cuisines": [
-"North Indian",
+"Indian",
 "South Indian",
-"Fast Food",
-"Snacks",
-"Biryani",
-"Beverages"
+"Thalis"
 ],
-"avgRating": 4.4,
-"veg": true,
-"parentId": "484349",
-"avgRatingString": "4.4",
-"totalRatingsString": "1.0K+",
+"avgRating": 4.3,
+"parentId": "19508",
+"avgRatingString": "4.3",
+"totalRatingsString": "22K+",
 "promoted": true,
-"adTrackingId": "cid=43037cb4-4527-4226-adc9-7ada5f2b80ae~p=9~adgrpid=43037cb4-4527-4226-adc9-7ada5f2b80ae#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=812299~plpr=COLLECTION~eid=a3b43155-5d35-414e-afd4-741a45357a57~srvts=1747969045886~collid=80424",
+"adTrackingId": "cid=92a8eed0-d4bc-4a9e-9e79-167f07370f3f~p=5~adgrpid=92a8eed0-d4bc-4a9e-9e79-167f07370f3f#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=218478~plpr=COLLECTION~eid=de0f4e72-675f-4eab-a0af-2e1a476d125a~srvts=1747985474953~collid=83639",
 "sla": {
-"deliveryTime": 41,
-"lastMileTravel": 6.7,
+"deliveryTime": 29,
+"lastMileTravel": 4.9,
 "serviceability": "SERVICEABLE",
-"slaString": "40-45 mins",
-"lastMileTravelString": "6.7 km",
+"slaString": "25-30 mins",
+"lastMileTravelString": "4.9 km",
 "iconType": "ICON_TYPE_EMPTY"
 },
 "availability": {
-"nextCloseTime": "2025-05-23 22:30:00",
+"nextCloseTime": "2025-05-23 16:00:00",
 "opened": true
 },
 "badges": {},
@@ -901,15 +561,17 @@ const resList=[ {
 "type": "F",
 "badgesV2": {
 "entityBadges": {
-"imageBased": {},
 "textExtendedBadges": {},
-"textBased": {}
+"textBased": {},
+"imageBased": {}
 }
 },
 "aggregatedDiscountInfoV3": {
-"header": "₹150 OFF",
-"subHeader": "ABOVE ₹299",
-"discountTag": "FLAT DEAL"
+"header": "10% OFF",
+"subHeader": "UPTO ₹100",
+"logoCtx": {
+"text": "BENEFITS"
+}
 },
 "orderabilityCommunication": {
 "title": {},
@@ -931,111 +593,18 @@ const resList=[ {
 "restaurantOfferPresentationInfo": {},
 "externalRatings": {
 "aggregatedRating": {
-"rating": "--"
-}
+"rating": "4.0",
+"ratingCount": "10K+"
+},
+"source": "GOOGLE",
+"sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
 },
 "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-"campaignId": "43037cb4-4527-4226-adc9-7ada5f2b80ae"
+"campaignId": "92a8eed0-d4bc-4a9e-9e79-167f07370f3f"
 },
 "analytics": {},
 "cta": {
-"link": "swiggy://menu?restaurant_id=812299&source=collection&query=Dosa",
-"text": "RESTAURANT_MENU",
-"type": "DEEPLINK"
-},
-"widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
-},
-"relevance": {
-"type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-"sectionId": "MENU_RETURN_FOOD"
-}
-}
-},
-{
-"card": {
-"card": {
-"@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-"info": {
-"id": "114723",
-"name": "Suprabath tiffins",
-"cloudinaryImageId": "xjpakucmbefgxloevbwf",
-"locality": "DWARAKAPURI COLONY",
-"areaName": "Punjagutta",
-"costForTwo": "₹150 for two",
-"cuisines": [
-"South Indian"
-],
-"avgRating": 4.4,
-"parentId": "18952",
-"avgRatingString": "4.4",
-"totalRatingsString": "11K+",
-"sla": {
-"deliveryTime": 23,
-"lastMileTravel": 2.8,
-"serviceability": "SERVICEABLE",
-"slaString": "20-25 mins",
-"lastMileTravelString": "2.8 km",
-"iconType": "ICON_TYPE_EMPTY"
-},
-"availability": {
-"nextCloseTime": "2025-05-23 22:30:00",
-"opened": true
-},
-"badges": {
-"imageBadges": [
-{
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
-}
-]
-},
-"isOpen": true,
-"aggregatedDiscountInfoV2": {},
-"type": "F",
-"badgesV2": {
-"entityBadges": {
-"textBased": {},
-"imageBased": {
-"badgeObject": [
-{
-"attributes": {
-"imageId": "v1695133679/badges/Pure_Veg111.png",
-"description": "pureveg"
-}
-}
-]
-},
-"textExtendedBadges": {}
-}
-},
-"orderabilityCommunication": {
-"title": {},
-"subTitle": {},
-"message": {},
-"customIcon": {},
-"commsStyling": {}
-},
-"differentiatedUi": {
-"displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-"differentiatedUiMediaDetails": {
-"mediaType": "ADS_MEDIA_ENUM_IMAGE",
-"lottie": {},
-"video": {}
-}
-},
-"reviewsSummary": {},
-"displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-"restaurantOfferPresentationInfo": {},
-"externalRatings": {
-"aggregatedRating": {
-"rating": "--"
-}
-},
-"ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-},
-"analytics": {},
-"cta": {
-"link": "swiggy://menu?restaurant_id=114723&source=collection&query=Dosa",
+"link": "swiggy://menu?restaurant_id=218478&source=collection&query=Biryani",
 "text": "RESTAURANT_MENU",
 "type": "DEEPLINK"
 },
