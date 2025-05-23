@@ -1,7 +1,57 @@
-#parent {
-    color: red;
+.header {
+    border: 1px solid black;
+     display: flex;
+     justify-content: space-between;
 }
 
-h1 {
-    color: blue;
+.logo {
+   height: auto;
+   width: 100px;
 }
+
+
+.nav-bar > ul {
+    display: flex;
+    
+}
+
+.nav-bar > ul > li {
+    padding: 10px;
+    list-style-type: none;
+    font-size: 24px;
+    margin-right: 20px;
+    
+}
+.resto-card {
+    
+   
+    width: 200px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.resto-card:hover {
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.res-card {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.search{
+   
+    padding-top: 10px;
+}
+
+.food-Img{
+    width: 200px;
+}
+
+
+
+
+
+
+
