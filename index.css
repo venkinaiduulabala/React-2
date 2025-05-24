@@ -5,18 +5,12 @@
 }
 
 .logo {
-   height: 60px;
-   
+   height: 60px;  
 }
-
-
 .nav-bar > ul {
     display: flex;
     gap: 15px;
-    
-    
 }
-
 .nav-bar > ul > li {
     padding: 10px;
     list-style-type: none;
@@ -25,9 +19,7 @@
     
 }
 .resto-card {
-    
-   
-    width: 250px;
+    width: 230px;
     margin: 5px;
     padding: 5px;
     border-radius: 8px;
@@ -44,7 +36,6 @@
 }
 
 .search{
-   
     padding-top: 10px;
 }
 
@@ -53,6 +44,11 @@
     height: 150px;
     object-fit: cover;
     border-radius: 6px;
+}
+
+.filter {
+    margin: 5px;
+    padding: 5px;
 }
 
 
