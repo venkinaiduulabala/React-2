@@ -14,18 +14,18 @@ const Body = () => {
   }, [])
 
   const fetchData = async () => {
-   const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4520253&lng=78.3742678&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null");
+   const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.464547&lng=78.3396928&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING#");
    const json=await data.json();
 
-   //console.log(json)
+   console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
 
-   const filteData=json.data.cards.filter(
-      eachElement => eachElement.card.card.hasOwnProperty ("info")
-   )
+   // const filteData=json.data.cards.filter(
+   //    eachElement => eachElement.card.card.hasOwnProperty ("info")
+   // )
   
-   setRestarentList(filteData)
-   setFilteredReestro(filteData)
+   setRestarentList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+   setFilteredReestro(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
    //setRestarentData(json?.data?.cards[4]?.card?.card?.cards)    
    }
 
@@ -50,7 +50,7 @@ console.log("Body Rendered")
              />
             <button onClick={ () => { 
                const filteredRestarunt= restarentLlist.filter((resta)=> {
-                return  resta?.card?.card?.info?.name?.toLowerCase()?.includes(serchText?.toLowerCase())
+                return  resta?.info?.name?.toLowerCase()?.includes(serchText?.toLowerCase())
                })
                setFilteredReestro(filteredRestarunt)
                console.log(filteredRestarunt)
@@ -62,9 +62,9 @@ console.log("Body Rendered")
             <button className="filter" 
             onClick= { () =>{
 
-             const UpdateData =restarentLlist.filter((res) => res?.card?.card?.info?.avgRating >= 4.2)
+             const UpdateData =restarentLlist.filter((res) => res?.info?.avgRating >= 4.2)
                       setFilteredReestro(UpdateData)
-               
+               console.log(UpdateData)
             }}    >
 
                       
@@ -78,7 +78,8 @@ console.log("Body Rendered")
            {
             filteredRestro.map((restarent) => 
                (<Restocard resdata={restarent} 
-                  key={restarent.card.card.info.id}/>))
+                  key={restarent?.info?.id}/>))
+                  
            }
            
          </div>
