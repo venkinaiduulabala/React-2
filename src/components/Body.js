@@ -62,19 +62,13 @@ console.log("Body Rendered")
             <button className="filter" 
             onClick= { () =>{
 
-             const UpdateData =restarentLlist.filter((res) => res.card.card.info.avgRating >= 4.2)
-                      setRestarentList(UpdateData)
-               // restarentLlist=restarentLlist.filter(
-               //    (res) => res.card.card.info.avgRating > 4 
-               // );
-               // console.log(restarentLlist)
+             const UpdateData =restarentLlist.filter((res) => res?.card?.card?.info?.avgRating >= 4.2)
+                      setFilteredReestro(UpdateData)
+               
             }}    >
 
                       
-               {/* resList = resList.filter((res) = {res.data.avgRating > 4})
-              
-               resList=resList.filter(
-              (res) => res.data.avgRating > 4) */}
+           
 
             
             Filter Rating </button>
