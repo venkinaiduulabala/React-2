@@ -10,7 +10,6 @@ const Body = () => {
    
     useEffect (() => {
     fetchData()
-
   }, [])
 
   const fetchData = async () => {
@@ -29,13 +28,7 @@ const Body = () => {
    //setRestarentData(json?.data?.cards[4]?.card?.card?.cards)    
    }
 
-if (restarentLlist.length === 0) {
-      return <h1><Shimmer/></h1>;
-
-}
-
-
-console.log("Body Rendered")
+if (restarentLlist.length === 0) <h1><Shimmer/></h1>;
 
    return(
       <div>
@@ -55,10 +48,6 @@ console.log("Body Rendered")
                setFilteredReestro(filteredRestarunt)
                console.log(filteredRestarunt)
             }} >search</button>
-
-
-
-
             <button className="filter" 
             onClick= { () =>{
 
@@ -66,11 +55,6 @@ console.log("Body Rendered")
                       setFilteredReestro(UpdateData)
                console.log(UpdateData)
             }}    >
-
-                      
-           
-
-            
             Filter Rating </button>
          </div>
          <div className="res-card">
