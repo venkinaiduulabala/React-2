@@ -1,11 +1,11 @@
 
 import { CDN_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
    const [btnupdate, setBtnupdate] = useState("Login")
-console.log("Header Rendered")
+
 
 
    return (
@@ -16,10 +16,10 @@ console.log("Header Rendered")
             </div>
            <div className="nav-bar">
          <ul>
-            <li>Home</li>
-            <li>Contact Us</li>
-            <li>About Us</li>
-            <li>Cart</li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/contact'>Contact Us</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/">Cart</Link></li>
 
             <button className="login_btn" onClick={() => {
                btnupdate === "Login"

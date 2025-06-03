@@ -2,6 +2,7 @@
 import Restocard from "./Restocard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom"; 
 
 const Body = () => {
    const [restarentLlist  , setRestarentList] = useState( [] )
@@ -28,7 +29,9 @@ const Body = () => {
    //setRestarentData(json?.data?.cards[4]?.card?.card?.cards)    
    }
 
-if (restarentLlist.length === 0) <h1><Shimmer/></h1>;
+if (restarentLlist.length === 0) {
+   return<h1><Shimmer/></h1>;  
+}
 
    return(
       <div>
@@ -61,10 +64,8 @@ if (restarentLlist.length === 0) <h1><Shimmer/></h1>;
 
            {
             filteredRestro.map((restarent) => 
-               (<Restocard resdata={restarent} 
-                  key={restarent?.info?.id}/>))
-                  
-           }
+               (<Link to={"/restaurents/:restarent?.info?.id"}  key={restarent?.info?.id}>
+                  <Restocard resdata={restarent} /></Link>)) }
            
          </div>
    

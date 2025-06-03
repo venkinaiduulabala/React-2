@@ -86,6 +86,25 @@ color: #656b97;
     background-color: greenyellow;
 }
 
+.menu-item {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  list-style: none;
+  font-family: Arial, sans-serif;
+}
+
+.menu-item strong {
+  font-size: 16px;
+  color: #333;
+}
+
+.menu-item .description {
+  color: #666;
+  font-size: 14px;
+}
+
+
 
 
 
