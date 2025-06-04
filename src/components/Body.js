@@ -64,7 +64,7 @@ if (restarentLlist.length === 0) {
 
            {
             filteredRestro.map((restarent) => 
-               (<Link to={"/restaurents/:restarent?.info?.id"}  key={restarent?.info?.id}>
+               (<Link to={"/restaurents/:resId"}  key={restarent?.info?.id}>
                   <Restocard resdata={restarent} /></Link>)) }
            
          </div>

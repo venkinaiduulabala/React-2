@@ -1,7 +1,7 @@
 import {useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-import { Menu_url } from "../utils/constants";
+
 import { useParams } from "react-router-dom";
 
 
@@ -15,7 +15,7 @@ const Reastaruntmenu = () => {
     },[]);
 
    const fetchItem=async() => {
-    const data=await fetch(Menu_url+256893)
+    const data=await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.4520151&lng=78.3443565&restaurantId=+{256893}+&catalog_qa=undefined&submitAction=ENTER")
     const json=await data.json()
     console.log(json.data)
    
@@ -29,7 +29,6 @@ if (restMenu === null) return <div><Shimmer/></div>
 
 const {name,cuisines,avgRating,costForTwo,sla}=restMenu?.cards[2]?.card?.card?.info
 const {itemCards}=restMenu.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card
-console.log(name)
 console.log(itemCards)
     return ( 
         <div>
