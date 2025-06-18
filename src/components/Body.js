@@ -3,6 +3,7 @@ import Restocard from "./Restocard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom"; 
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
    const [restarentLlist  , setRestarentList] = useState( [] )
@@ -27,11 +28,21 @@ const Body = () => {
    setRestarentList(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
    setFilteredReestro(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
    //setRestarentData(json?.data?.cards[4]?.card?.card?.cards)    
-   }
+   };
+
+   
+const OnlineStatus = useOnlineStatus();
+
+if (OnlineStatus === false)
+   return (
+   <h1>
+      404 ! OPPS   chehck your Internet Connection
+      s</h1>
+   );
 
 if (restarentLlist.length === 0) {
    return<h1><Shimmer/></h1>;  
-}
+};
 
    return(
       <div>
@@ -64,7 +75,7 @@ if (restarentLlist.length === 0) {
 
            {
             filteredRestro.map((restarent) => 
-               (<Link to={"/restaurents/:resId"}  key={restarent?.info?.id}>
+               (<Link to={"/restaurents/" + restarent?.info?.id }  key={restarent?.info?.id}>
                   <Restocard resdata={restarent} /></Link>)) }
            
          </div>

@@ -7,19 +7,21 @@ class UseClass extends React.Component{
         count : 1,
         count2 : 2
     };
-    console.log("Constructor")
+    
      };
 
 
-     componentDidMount () {
-        console.log("mounting")
+    async componentDidMount () {
+      const data=await fetch("")
+      const json=await data.json()
+      console.log(json)
      }
 
         render () {
 const {Name, contact}=this.props
 const {count,count2}=this.state
 
-      console.log("Render")
+      
             return(
                <div className="Use-Menu">
                 <h1>counts:{count}</h1> 
