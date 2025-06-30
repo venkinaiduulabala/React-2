@@ -12,7 +12,6 @@ useEffect (() => {
 const fetchData = async() => {
 const data = await fetch(Menu_url + resId);
 const json= await data.json();
-console.log(json.data);
 setRestMenu(json.data);
 }
     return restMenu;

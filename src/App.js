@@ -7,8 +7,10 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom";
 import Contact from "./components/Contact";
 import Reastaruntmenu from "./components/Reastaruntmenu";
-//import Grocery from "./components/Grocery";
+import { Provider } from "react-redux";
 import { lazy ,Suspense } from "react";
+import Footer from "./components/Footer";
+
 
 
 const Grocery = lazy( () => import("./components/Grocery"))
@@ -18,6 +20,7 @@ const App = () =>{
    <div>
    <Header/>
    <Outlet/>
+   <Footer />
    </div>
    )
 }

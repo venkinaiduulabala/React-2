@@ -1,4 +1,6 @@
-.header {
+@import "tailwindcss";
+
+/* .header {
     border: 1px solid black;
      display: flex;
      justify-content: space-between;
@@ -113,7 +115,7 @@ color: #656b97;
 .Use-Menu:hover{
    cursor: pointer;
 }
-
+ */
 
 
 

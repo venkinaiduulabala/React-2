@@ -14,7 +14,7 @@ class UseClass extends React.Component{
     async componentDidMount () {
       const data=await fetch("")
       const json=await data.json()
-      console.log(json)
+      
      }
 
         render () {
