@@ -1,8 +1,17 @@
+import { useDispatch } from "react-redux";
 import { LOGO_URL } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 
 const ItemLIst = ({items}) => {
     console.log(items)
+
+ const dispatch = useDispatch()
+
+const handleAddItem = (item) => {
+   dispatch(addItem(item))
+}
+
     return (
     <div >
     
@@ -24,7 +33,8 @@ const ItemLIst = ({items}) => {
             
                 
                <div className=""> 
-                <button className="border-solid border-black text-black bg-green-100 rounded-xl px-2.5 shadow-xl">Add ➕</button>
+                <button className="border-solid border-black text-black bg-green-100 rounded-xl px-2.5 shadow-xl" 
+                  onClick={() => handleAddItem(item)} >Add ➕</button>
                 </div>
            </div>
            </div>

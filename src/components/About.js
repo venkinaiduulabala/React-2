@@ -5,7 +5,7 @@ import UseCard from "./UseCard";
 const About = () =>{
     return (
         <div>
-        <h1>About Page</h1>
+        <h1 className="text-center p-2 m-2">About Page</h1>
         <h2>From the About Page</h2>
        {/* <UseCard Name={"This is from the Class based Component"}/> */}
         <UseClass Name={"This is from the Class Based Component"} contact={"from The App"}/>

@@ -3,11 +3,16 @@ import { CDN_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
    const [btnupdate, setBtnupdate] = useState("Login")
 
   const OnlineStatus = useOnlineStatus();
+
+  const cartItems = useSelector((store) => store.cart.items)
+console.log(cartItems)
+
 
    return (
       <div className="flex justify-between border border-solid  items-center rounded-md bg-gray-100 shadow-lg sm:bg-amber-100 lg:bg-amber-200 xl:bg-gray-200">
@@ -23,7 +28,7 @@ const Header = () => {
             <li className="px-2"><Link to='/'>Home</Link></li>
             <li className="px-2"><Link to='/contact'>Contact Us</Link></li>
             <li className="px-2"><Link to="/about">About Us</Link></li>
-            <li className="px-2"><Link to="/">Cart</Link></li>
+            <li className="px-2 font-bold text-2xl"><Link to="/cart">Cart ({cartItems.length})</Link></li>
             <li className="px-2"><Link to="/grocery">Grocery</Link></li>
 
             <button className="px-2" onClick={() => {
